@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj Kumar | Senior Vice President - Technical & Operations</title>
+  <meta name="description" content="Portfolio of Manoj Kumar - Façade, Fenestration & Structural Glazing Leader with 30+ years of mega-project experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-accent">MK</span>
+        <span class="brand-text">Manoj Kumar</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills & AI</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge hero-badge">
+          <span class="badge-dot"></span> Generative AI & Façade Engineering Pioneer
+        </div>
+        <h1 class="hero-title">
+          Manoj <span class="gradient-text">Kumar</span>
+        </h1>
+        <h2 class="hero-subtitle">Senior Vice President – Technical & Operations</h2>
+        <p class="hero-description">
+          Empowering architectural landmarks with world-class glass, façade, and lifestyle solutions. Over 30 years leading mega-project execution for airports, tech parks, luxury developments, and commercial towers.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-glass">Contact Me</a>
+          <a href="#about" class="btn btn-link">View Full Profile &darr;</a>
+        </div>
+
+        <div class="hero-stats" id="heroStats">
+          <!-- Dynamically populated from JS -->
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-card">
+          <div class="portrait-glow"></div>
+          <img src="/manoj_portrait.jpg" alt="Manoj Kumar" class="portrait-img" />
+          <div class="portrait-info">
+            <div class="portrait-name">Manoj Kumar</div>
+            <div class="portrait-role">Senior Vice President, ModDwell</div>
+            <div class="portrait-location">📍 Puducherry & Bangalore, India</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Executive Summary</span>
+        <h2 class="section-title">Transforming Façades Through <span class="gradient-text">Precision & Innovation</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-panel">
+          <div class="card-icon">🏗️</div>
+          <h3>World-Class Solutions</h3>
+          <p>Over 30 years expertise in structural glazing, fenestration, skylights, curtain walls, and bespoke luxury glass engineering across India and the UAE.</p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="card-icon">⚡</div>
+          <h3>AI & Operations Leadership</h3>
+          <p>Leveraging Generative AI, Power BI analytics, and automated workflows to streamline project handovers, procurement, and site execution for multi-million dollar developments.</p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="card-icon">🌍</div>
+          <h3>Global & National Impact</h3>
+          <p>Proven track record leading major airport terminals (Mangalore, Trivandrum), IT Campuses (Infosys, Wipro, RMZ), and high-rise commercial structures.</p>
+        </div>
+      </div>
+
+      <div class="about-detail glass-panel">
+        <div class="about-detail-header">
+          <h3>Background & Vision</h3>
+        </div>
+        <p id="summaryText">
+          <!-- Populated from JS -->
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Highlights</span>
+        <h2 class="section-title">Landmark <span class="gradient-text">Architectural Projects</span></h2>
+        <p class="section-desc">A selection of major infrastructure, tech park, airport, and luxury commercial developments handled throughout my career.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="projectFilters">
+        <button class="filter-btn active" data-filter="All">All Projects</button>
+        <button class="filter-btn" data-filter="Airports">Airports</button>
+        <button class="filter-btn" data-filter="Tech Parks">Tech & IT Parks</button>
+        <button class="filter-btn" data-filter="Commercial & Educational">Commercial & Educational</button>
+        <button class="filter-btn" data-filter="In Progress">In Progress</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 30+ Year Career Experience Timeline -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career Journey</span>
+        <h2 class="section-title">30+ Years of <span class="gradient-text">Leadership Experience</span></h2>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills, AI & Technical Expertise Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Innovation Focus</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-left glass-panel">
+          <h3>Core Expertise & Proficiency</h3>
+          <div class="skills-list" id="skillsList">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+
+        <div class="skills-right">
+          <div class="ai-badge-card glass-panel">
+            <div class="ai-icon">🤖</div>
+            <h3>Generative AI & Automation Integration</h3>
+            <p>Pioneering the application of modern AI tools, automated estimation, 5-axis CNC programming, and Power BI dashboards in façade project management to ensure on-time delivery and operational excellence.</p>
+          </div>
+
+          <div class="languages-card glass-panel">
+            <h3>Languages Spoken</h3>
+            <div class="languages-tags" id="languagesTags">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Education Section -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Education</span></h2>
+      </div>
+
+      <div class="certs-grid">
+        <div class="certs-column">
+          <h3 class="column-title">Professional Certifications</h3>
+          <div class="certs-list" id="certsList">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+
+        <div class="certs-column">
+          <h3 class="column-title">Academic Degree</h3>
+          <div class="edu-card glass-panel" id="eduCard">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box glass-panel">
+        <div class="contact-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect for <span class="gradient-text">Your Next Project</span></h2>
+          <p>Whether discussing new façade engineering developments, technical advisory, or strategic industry partnerships.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-item">
+              <div class="info-icon">📧</div>
+              <div>
+                <span class="info-label">Email Address</span>
+                <a href="mailto:glazemanoj699698@gmail.com" class="info-value">glazemanoj699698@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div>
+                <span class="info-label">Phone Number</span>
+                <a href="tel:+919900087069" class="info-value">+91 9900087069</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">💼</div>
+              <div>
+                <span class="info-label">LinkedIn Profile</span>
+                <a href="https://www.linkedin.com/in/glazemanoj" target="_blank" class="info-value">linkedin.com/in/glazemanoj</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <span class="info-label">Primary Office / Location</span>
+                <span class="info-value">Puducherry & Bangalore, India</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required placeholder="name@company.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" required placeholder="Describe your project or inquiry..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-accent">MK</span> Manoj Kumar Portfolio
+      </div>
+      <div class="footer-copyright">
+        © <span id="currentYear"></span> Manoj Kumar. Senior Vice President - Technical & Operations. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
