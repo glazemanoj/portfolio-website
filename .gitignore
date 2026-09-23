@@ -1,4 +1,9 @@
 node_modules
+.next
 dist
 *.log
 .DS_Store
+
+# Sensitive & Personal Documents (Never upload to Git)
+*.pdf
+LinkedIn_Profile.pdf
