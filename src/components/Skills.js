@@ -1,32 +1,31 @@
 'use client';
 import { profileData } from '../data/profileData';
-import { Cpu, Languages } from 'lucide-react';
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 relative">
-      <div className="w-[90%] max-w-7xl mx-auto space-y-12">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-sky-400">Technical Competencies</span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading">
-            Skills & <span className="gradient-text">Innovation Focus</span>
+    <section id="skills" className="py-28 relative">
+      <div className="w-[88%] max-w-6xl mx-auto space-y-16">
+        <div className="space-y-3">
+          <span className="text-xs font-mono tracking-widest text-sky-400 uppercase">04 / Capabilities</span>
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-white tracking-tight">
+            Engineering & AI Leadership
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Progress Bars */}
-          <div className="lg:col-span-7 glass-panel rounded-2xl p-8 space-y-6">
-            <h3 className="font-heading font-bold text-xl text-slate-100">Core Expertise & Proficiency</h3>
-            <div className="space-y-5">
+          <div className="lg:col-span-7 glass-panel-minimal rounded-2xl p-8 space-y-6">
+            <h3 className="font-heading font-semibold text-lg text-white">Core Expertise</h3>
+            <div className="space-y-6">
               {profileData.skills.map((s, i) => (
-                <div key={i} className="space-y-1.5">
-                  <div className="flex justify-between text-sm font-semibold">
-                    <span className="text-slate-200">{s.name}</span>
-                    <span className="text-sky-400 font-heading">{s.level}%</span>
+                <div key={i} className="space-y-2">
+                  <div className="flex justify-between text-xs font-medium">
+                    <span className="text-slate-300">{s.name}</span>
+                    <span className="text-sky-400 font-mono">{s.level}%</span>
                   </div>
-                  <div className="h-2 rounded-full bg-white/5 overflow-hidden">
+                  <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
                     <div 
-                      className="h-full rounded-full bg-gradient-to-r from-sky-400 to-blue-600 transition-all duration-1000" 
+                      className="h-full rounded-full bg-sky-400 transition-all duration-1000" 
                       style={{ width: `${s.level}%` }}
                     />
                   </div>
@@ -35,29 +34,22 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Right Cards */}
+          {/* Right Column */}
           <div className="lg:col-span-5 space-y-6">
-            {/* AI Integration Card */}
-            <div className="glass-panel rounded-2xl p-6 space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
-                <Cpu className="w-6 h-6" />
-              </div>
-              <h3 className="font-heading font-bold text-lg text-slate-100">Generative AI & Automation Integration</h3>
+            <div className="glass-panel-minimal rounded-2xl p-8 space-y-4">
+              <span className="text-xs font-mono text-sky-400 uppercase">Automation & Generative AI</span>
+              <h3 className="font-heading font-semibold text-lg text-white">Operational Innovation</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Pioneering the application of modern AI tools, automated estimation, 5-axis CNC programming, and Power BI dashboards in façade project management to ensure on-time delivery and operational excellence.
               </p>
             </div>
 
-            {/* Languages Card */}
-            <div className="glass-panel rounded-2xl p-6 space-y-4">
-              <div className="flex items-center gap-2">
-                <Languages className="w-5 h-5 text-sky-400" />
-                <h3 className="font-heading font-bold text-lg text-slate-100">Languages Spoken</h3>
-              </div>
+            <div className="glass-panel-minimal rounded-2xl p-8 space-y-4">
+              <h3 className="font-heading font-semibold text-base text-white">Multilingual Proficiency</h3>
               <div className="flex flex-wrap gap-2">
                 {profileData.languages.map((l, i) => (
-                  <span key={i} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">
-                    🗣️ {l.name} ({l.level})
+                  <span key={i} className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs text-slate-300">
+                    {l.name} ({l.level})
                   </span>
                 ))}
               </div>
