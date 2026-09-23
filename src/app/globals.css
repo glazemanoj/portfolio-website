@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,23 +15,30 @@
   }
 
   body {
-    background-color: #07090e;
-    color: #f1f5f9;
+    background-color: #060913;
+    color: #f8fafc;
     font-family: var(--font-inter);
     overflow-x: hidden;
-    letter-spacing: -0.011em;
   }
 }
 
-.glass-panel-minimal {
-  background: rgba(13, 18, 30, 0.6);
+.gradient-text-bold {
+  background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 40%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel-bold {
+  background: rgba(12, 19, 36, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-panel-minimal:hover {
-  border-color: rgba(56, 189, 248, 0.25);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+.glass-panel-bold:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
 }

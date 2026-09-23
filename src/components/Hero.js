@@ -1,47 +1,48 @@
 'use client';
 import { profileData } from '../data/profileData';
-import { ArrowRight, MapPin, Linkedin, Github } from 'lucide-react';
+import { ArrowRight, Sparkles, MapPin, Linkedin, Github, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[100dvh] flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Background ambient radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sky-500/[0.04] blur-[120px] rounded-full pointer-events-none" />
+    <section id="hero" className="relative min-h-[100dvh] flex items-center pt-28 pb-20 overflow-hidden">
+      {/* Dynamic backdrop glow circles */}
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-sky-500/10 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="w-[88%] max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+      <div className="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
         {/* Left Copy */}
-        <div className="lg:col-span-7 space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-300 text-xs font-mono tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-            <span>Generative AI & Façade Engineering</span>
+        <div className="lg:col-span-7 space-y-7">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-sky-400/20 via-blue-500/20 to-emerald-400/20 border border-sky-400/40 text-sky-300 text-xs font-black tracking-wider uppercase shadow-md shadow-sky-500/10">
+            <Zap className="w-4 h-4 text-emerald-400 fill-emerald-400" />
+            <span>AI-Powered Façade Engineering Executive</span>
           </div>
 
-          <div className="space-y-3">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight font-heading text-white leading-tight">
-              Manoj Kumar
+          <div className="space-y-2">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight font-heading leading-tight text-white">
+              Manoj <span className="gradient-text-bold">Kumar</span>
             </h1>
-            <h2 className="text-lg sm:text-xl font-medium text-sky-400 font-heading">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-sky-400 font-heading">
               {profileData.headline}
             </h2>
           </div>
 
-          <p className="text-slate-400 text-base leading-relaxed max-w-xl font-normal">
+          <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
             Over 30 years of engineering leadership transforming architectural landmarks with world-class glass, structural glazing, fenestration, and Generative AI workflows.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a 
               href="#projects" 
-              className="px-6 py-3 rounded-full bg-white text-slate-950 font-semibold text-xs tracking-wide hover:bg-slate-200 transition-all flex items-center gap-2 group"
+              className="px-7 py-3.5 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-sky-400/30 hover:shadow-sky-400/50 hover:scale-[1.02] transition-all flex items-center gap-2 group"
             >
               <span>Explore Projects</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a 
               href="#contact" 
-              className="px-6 py-3 rounded-full bg-white/[0.04] border border-white/[0.1] text-slate-200 font-semibold text-xs hover:bg-white/[0.08] hover:border-white/20 transition-all"
+              className="px-7 py-3.5 rounded-full bg-slate-900/80 border border-sky-400/30 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 hover:border-sky-400/60 transition-all"
             >
               Contact Me
             </a>
@@ -51,31 +52,31 @@ export default function Hero() {
                 href={profileData.linkedin} 
                 target="_blank" 
                 rel="noreferrer"
-                className="p-2.5 rounded-full bg-white/[0.04] border border-white/[0.1] text-slate-400 hover:text-white transition-all"
+                className="p-3 rounded-full bg-slate-900 border border-white/10 text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-5 h-5" />
               </a>
               {profileData.github && (
                 <a 
                   href={profileData.github} 
                   target="_blank" 
                   rel="noreferrer"
-                  className="p-2.5 rounded-full bg-white/[0.04] border border-white/[0.1] text-slate-400 hover:text-white transition-all"
+                  className="p-3 rounded-full bg-slate-900 border border-white/10 text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all"
                   aria-label="GitHub"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-5 h-5" />
                 </a>
               )}
             </div>
           </div>
 
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/[0.08]">
+          {/* Bold Stats Banner */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-sky-500/20">
             {profileData.stats.map((st, i) => (
-              <div key={i} className="flex flex-col">
-                <span className="font-heading font-semibold text-2xl text-white">{st.value}</span>
-                <span className="text-xs text-slate-500 font-normal leading-snug mt-1">{st.label}</span>
+              <div key={i} className="glass-panel-bold rounded-xl p-4 text-center">
+                <span className="font-heading font-black text-3xl gradient-text-bold block">{st.value}</span>
+                <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider block mt-1">{st.label}</span>
               </div>
             ))}
           </div>
@@ -83,17 +84,18 @@ export default function Hero() {
 
         {/* Right Portrait Card */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-sm glass-panel-minimal rounded-2xl p-3 shadow-xl">
+          <div className="relative w-full max-w-md glass-panel-bold rounded-3xl p-5 shadow-2xl">
+            <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-600 to-emerald-400 rounded-3xl blur-md opacity-40 -z-10" />
             <img 
               src={profileData.avatar} 
               alt={profileData.name} 
-              className="w-full h-[380px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" 
+              className="w-full h-[420px] object-cover rounded-2xl shadow-lg" 
             />
             <div className="mt-4 text-center space-y-1">
-              <h3 className="font-heading font-semibold text-base text-slate-100">{profileData.name}</h3>
-              <p className="text-xs text-slate-400 font-medium">{profileData.headline.split('|')[0]}</p>
-              <p className="text-xs text-slate-500 flex items-center justify-center gap-1">
-                <MapPin className="w-3 h-3 text-slate-400" />
+              <h3 className="font-heading font-black text-xl text-white">{profileData.name}</h3>
+              <p className="text-xs font-bold text-sky-400">{profileData.headline.split('|')[0]}</p>
+              <p className="text-xs text-slate-400 font-medium flex items-center justify-center gap-1 pt-1">
+                <MapPin className="w-3.5 h-3.5 text-emerald-400" />
                 <span>{profileData.location}</span>
               </p>
             </div>

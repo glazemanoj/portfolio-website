@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Zap } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,27 +15,27 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#07090e]/85 backdrop-blur-xl border-b border-white/[0.08] py-4' : 'py-6'}`}>
-      <div className="w-[88%] max-w-6xl mx-auto flex items-center justify-between">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#060913]/90 backdrop-blur-xl border-b border-sky-500/20 py-3.5 shadow-lg shadow-sky-500/5' : 'py-5'}`}>
+      <div className="w-[90%] max-w-7xl mx-auto flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-3 group">
-          <span className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white font-medium flex items-center justify-center font-heading text-xs tracking-wider group-hover:border-sky-400/50 transition-colors">
+          <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-400 via-blue-600 to-emerald-400 text-slate-950 font-black flex items-center justify-center font-heading text-sm shadow-md shadow-sky-400/20 group-hover:scale-105 transition-transform">
             MK
           </span>
-          <span className="font-heading font-semibold text-lg text-slate-100 tracking-tight">
+          <span className="font-heading font-extrabold text-xl text-white tracking-tight">
             Manoj Kumar
           </span>
         </a>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 list-none">
-          <li><a href="#about" className="text-slate-400 hover:text-slate-100 text-xs font-medium tracking-wide transition-colors">About</a></li>
-          <li><a href="#experience" className="text-slate-400 hover:text-slate-100 text-xs font-medium tracking-wide transition-colors">Experience</a></li>
-          <li><a href="#projects" className="text-slate-400 hover:text-slate-100 text-xs font-medium tracking-wide transition-colors">Projects</a></li>
-          <li><a href="#skills" className="text-slate-400 hover:text-slate-100 text-xs font-medium tracking-wide transition-colors">Skills & AI</a></li>
-          <li><a href="#certifications" className="text-slate-400 hover:text-slate-100 text-xs font-medium tracking-wide transition-colors">Credentials</a></li>
+          <li><a href="#about" className="text-slate-300 hover:text-sky-400 text-sm font-semibold tracking-tight transition-colors">About</a></li>
+          <li><a href="#experience" className="text-slate-300 hover:text-sky-400 text-sm font-semibold tracking-tight transition-colors">Experience</a></li>
+          <li><a href="#projects" className="text-slate-300 hover:text-sky-400 text-sm font-semibold tracking-tight transition-colors">Projects</a></li>
+          <li><a href="#skills" className="text-slate-300 hover:text-sky-400 text-sm font-semibold tracking-tight transition-colors">Skills & AI</a></li>
+          <li><a href="#certifications" className="text-slate-300 hover:text-sky-400 text-sm font-semibold tracking-tight transition-colors">Credentials</a></li>
           <li>
-            <a href="#contact" className="px-4 py-1.5 rounded-full bg-white/5 border border-white/15 text-slate-200 hover:text-white hover:border-sky-400/40 text-xs font-medium transition-all flex items-center gap-1">
-              Contact <ArrowUpRight className="w-3.5 h-3.5 text-sky-400" />
+            <a href="#contact" className="px-5 py-2 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-slate-950 hover:shadow-lg hover:shadow-sky-400/30 text-xs font-black uppercase tracking-wider transition-all flex items-center gap-1.5">
+              Contact <Zap className="w-3.5 h-3.5 fill-slate-950" />
             </a>
           </li>
         </ul>
@@ -43,22 +43,22 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-slate-300 p-2 focus:outline-none"
+          className="md:hidden text-slate-200 p-2 focus:outline-none"
           aria-label="Toggle Navigation"
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#07090e] border-b border-white/[0.08] px-6 py-6 space-y-4">
-          <a href="#about" onClick={() => setMobileOpen(false)} className="block text-slate-300 text-sm font-medium">About</a>
-          <a href="#experience" onClick={() => setMobileOpen(false)} className="block text-slate-300 text-sm font-medium">Experience</a>
-          <a href="#projects" onClick={() => setMobileOpen(false)} className="block text-slate-300 text-sm font-medium">Projects</a>
-          <a href="#skills" onClick={() => setMobileOpen(false)} className="block text-slate-300 text-sm font-medium">Skills & AI</a>
-          <a href="#certifications" onClick={() => setMobileOpen(false)} className="block text-slate-300 text-sm font-medium">Credentials</a>
-          <a href="#contact" onClick={() => setMobileOpen(false)} className="inline-block px-4 py-2 rounded-full bg-white/10 text-slate-200 text-xs font-medium">
+        <div className="md:hidden bg-[#060913] border-b border-sky-500/20 px-6 py-6 space-y-4">
+          <a href="#about" onClick={() => setMobileOpen(false)} className="block text-slate-200 text-base font-bold">About</a>
+          <a href="#experience" onClick={() => setMobileOpen(false)} className="block text-slate-200 text-base font-bold">Experience</a>
+          <a href="#projects" onClick={() => setMobileOpen(false)} className="block text-slate-200 text-base font-bold">Projects</a>
+          <a href="#skills" onClick={() => setMobileOpen(false)} className="block text-slate-200 text-base font-bold">Skills & AI</a>
+          <a href="#certifications" onClick={() => setMobileOpen(false)} className="block text-slate-200 text-base font-bold">Credentials</a>
+          <a href="#contact" onClick={() => setMobileOpen(false)} className="inline-block px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-slate-950 text-xs font-black uppercase tracking-wider">
             Contact Me
           </a>
         </div>
